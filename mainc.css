@@ -1,0 +1,333 @@
+/* Basic Reset */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Navigation Panel */
+.nav-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(10px); /* Blur background */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    /* Fallback for older browsers */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: a shadow to enhance contrast */
+}
+
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px; /* Increased spacing */
+    font-size: 18px; /* Slightly larger text */
+    font-family: 'Roboto', sans-serif; /* Modern, clean font */
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth color and transform transitions */
+}
+
+.nav-link img {
+    width: 40px; /* Adjust size as needed */
+    height: auto;
+    vertical-align: middle;
+    transition: transform 0.3s ease; /* Smooth transform transition */
+}
+
+.nav-link:hover {
+    color: rgb(0, 64, 255); /* Change text color on hover */
+    transform: scale(1.1); /* Slightly enlarge the text */
+}
+
+.nav-link:hover img {
+    transform: rotate(360deg); /* Rotate the image on hover */
+}
+
+.nav-link::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: #ff0; /* Color of the underline */
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%; /* Expand underline on hover */
+}
+
+/* Background Section */
+.background {
+    background-image: url('images/cat.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+    color: white;
+    padding-top: 80px; /* Ensure content is below the fixed nav panel */
+}
+
+.title-container {
+    padding: 20px;
+}
+
+.title-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.socials {
+    position: absolute;
+    bottom: 15%; /* Adjust this value to move the icons higher or lower */
+    width: 100%;
+    text-align: center;
+}
+
+.social-link {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-link img {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+}
+
+.social-link:hover {
+    transform: scale(1.2);
+}
+
+/* Second Section */
+.second-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+    margin-top: 20px;
+    background: #000000;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgb(0, 0, 0);
+}
+
+.left, .right {
+    flex: 1;
+    padding: 20px;
+}
+
+.left {
+    max-width: 30%; /* Adjust as needed */
+}
+
+.right {
+    max-width: 70%; /* Adjust as needed */
+}
+
+/* Image Grid */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Responsive grid */
+    gap: 10px; /* Space between images */
+    padding: 10px;
+    height: 500px;
+}
+
+.image-grid img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.image-grid img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Typography Enhancements */
+.left h1 {
+    font-size: 36px; /* Larger font size for the heading */
+    margin-bottom: 15px; /* Spacing below the heading */
+    color: #000000; /* Darker text color for contrast */
+    font-family: 'Roboto', sans-serif; /* Consistent font */
+    font-weight: 700; /* Bold heading */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 0, 0, 0.5); /* Glowing effect */
+}
+
+.left p {
+    font-size: 18px; /* Adjusted font size for readability */
+    line-height: 1.6; /* Improved line spacing */
+    color: #ffffff; /* Subtle text color */
+}
+
+/* Paddsss Section */
+.paddsss-section {
+    background-color: #000000; /* Dark background color for contrast */
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    margin-top: 20px; /* Ensure spacing from previous sections */
+}
+
+.glowing-title {
+    font-size: 48px; /* Large font size for emphasis */
+    font-weight: 700; /* Bold font */
+    color: #fff; /* White text color */
+    text-shadow: 0 0 15px rgba(111, 84, 84, 0.6), 0 0 30px rgb(255, 255, 255); /* Glowing effect */
+    margin-bottom: 30px; /* Space below the title */
+}
+
+.container-wrapper {
+    display: flex; /* Use flexbox */
+    flex-direction: row; /* Align containers horizontally */
+    justify-content: center; /* Center items horizontally */
+    align-items: stretch; /* Stretch items to have the same height */
+    gap: 30px; /* Spacing between containers */
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent background for depth */
+    border-radius: 12px; /* Rounded corners */
+    padding: 20px; /* Padding inside the container */
+    box-shadow: 0 8px 20px rgb(255, 255, 255); /* Stronger shadow for 3D effect */
+    width: 280px; /* Fixed width for each container */
+    max-width: 80%; /* Limit width for larger screens */
+    position: relative; /* To position decoration images */
+    overflow: hidden; /* To clip images */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.container:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+}
+
+.decoration-image {
+    position: absolute; /* Position decoration image */
+    top: -20px; /* Adjust according to your image */
+    right: -20px; /* Adjust according to your image */
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+}
+
+.container-title {
+    font-size: 24px; /* Font size for titles */
+    font-weight: 700; /* Bold font */
+    color: #fff; /* White text color */
+    margin: 15px 0; /* Space around title */
+    font-family: 'Poppins', sans-serif; /* Nice graphic font */
+}
+
+.container-description {
+    font-size: 16px; /* Font size for descriptions */
+    color: rgba(255, 255, 255, 0.8); /* Slightly transparent text */
+    font-family: 'Roboto', sans-serif; /* Another nice graphic font */
+    margin-bottom: 15px; /* Space below description */
+}
+
+.paddsss-image {
+    max-width: 100%; /* Ensure the image fits within the container */
+    height: auto;
+    border-radius: 8px; /* Rounded corners for images */
+}
+
+/* New Section */
+.new-section {
+    background-color: #000000; /* Dark background color for contrast */
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    margin-top: 20px; /* Ensure spacing from previous sections */
+    display: flex; /* Flexbox for alignment */
+    flex-direction: column; /* Ensure items are in column order */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center the text */
+    position: relative; /* To position decoration images */
+    overflow: hidden; /* To clip images */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.new-section-title {
+    font-size: 48px; /* Large font size for emphasis */
+    font-weight: 700; /* Bold font */
+    color: #fff; /* White text color */
+    text-shadow: 0 0 15px rgba(111, 84, 84, 0.6), 0 0 30px rgb(255, 255, 255); /* Glowing effect */
+    margin-bottom: 30px; /* Space below the title */
+}
+
+.new-section-description {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.new-section-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid with larger items */
+    gap: 20px; /* Space between items */
+    justify-content: center; /* Center the grid within the section */
+}
+
+.grid-item {
+    background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent background for depth */
+    border-radius: 12px; /* Rounded corners */
+    padding: 20px; /* Padding inside the container */
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0); /* Stronger shadow for 3D effect */
+    position: relative; /* To position decoration images */
+    overflow: hidden; /* To clip images */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    height: 350px; /* Increased height for larger images */
+    width: 100%; /* Full width of grid item */
+    max-width: 500px; /* Limit width for larger screens */
+    min-height: 300px; /* Increased minimum height */
+}
+
+.grid-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.grid-image {
+    width: 100%; /* Ensure the image fills the width */
+    height: 100%; /* Make the image fill the entire height of the grid item */
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+    border-radius: 4px;
+}
+
+.grid-item-title {
+    font-size: 24px; /* Slightly larger title */
+    margin: 10px 0 5px; /* Margin for spacing */
+    color: #fff; /* White title */
+}
+
+.grid-item-description {
+    font-size: 16px; /* Slightly larger description */
+    color: rgba(255, 255, 255, 0.8); /* Slightly transparent */
+    margin-top: 10px; /* Add margin above the description */
+}
+
+
+
+
+
+
+
